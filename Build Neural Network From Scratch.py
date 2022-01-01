@@ -81,7 +81,7 @@ class NeuralNetwork(object):
         hidden_error = np.dot(self.weights_hidden_to_output , error)
         
         #  Backpropagated error terms
-        output_error_term = error * 1 # 1 for output derivative 
+        output_error_term = error * 1 # 1 for output derivative output node input is output not use activation function
         
         hidden_error_term = hidden_error * hidden_outputs * (1- hidden_outputs)
         
